@@ -11,19 +11,15 @@ import {
   WalletModalProvider
 } from "@solana/wallet-adapter-react-ui";
 
-import {
-  PhantomWalletAdapter
-} from "@solana/wallet-adapter-wallets";
-
 import "@solana/wallet-adapter-react-ui/styles.css";
+
+// ⚡ NON IMPORTARE PhantomWalletAdapter
 
 const endpoint = "https://api.devnet.solana.com";
 
-const wallets = [new PhantomWalletAdapter()];
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ConnectionProvider endpoint={endpoint}>
-    <WalletProvider wallets={wallets} autoConnect>
+    <WalletProvider wallets={[]} autoConnect={false}>
       <WalletModalProvider>
         <App />
       </WalletModalProvider>
