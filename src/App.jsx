@@ -10,7 +10,7 @@ export default function App() {
   const [date, setDate] = useState("");
   const [tasks, setTasks] = useState([]);
 
-  const API = "http://localhost:3000";
+  const API = https://backend-fwbm.onrender.com;
 
   // SW
   useEffect(() => {
